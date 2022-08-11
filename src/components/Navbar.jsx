@@ -34,24 +34,27 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="d-none d-lg-block">
-          <button
+          <Link
+            to="login"
             type="button"
             class="border border-2 border-dark btn btn-light"
           >
             Login
-          </button>
-          <button
+          </Link>
+          <Link
+            to="register"
             type="button"
             class="border border-2 border-dark btn btn-light mx-2"
           >
             Register
-          </button>
-          <button
+          </Link>
+          <Link
+            to="cart"
             type="button"
             class="border border-2 border-dark btn btn-light"
           >
             Cart
-          </button>
+          </Link>
         </div>
       </div>
     </nav>
