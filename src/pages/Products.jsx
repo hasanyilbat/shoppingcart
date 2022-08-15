@@ -16,6 +16,17 @@ const Products = () => {
   return (
     <div>
       <h1 className="display-4 text-center p-3"> PRODUCTS</h1>
+      <div className=" d-flex justify-content-center gap-2 mb-5">
+        <div class="border border-2 border-dark btn btn-light">All</div>
+        <div class="border border-2 border-dark btn btn-light">
+          Men's Clothing
+        </div>
+        <div class="border border-2 border-dark btn btn-light">
+          Women's Clothing
+        </div>
+        <div class="border border-2 border-dark btn btn-light">Jewelery</div>
+        <div class="border border-2 border-dark btn btn-light">Electronic</div>
+      </div>
       <div className="d-flex gap-4 container" style={{ flexWrap: "wrap" }}>
         {productsList?.map((product) => {
           return (
