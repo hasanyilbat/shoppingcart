@@ -1,7 +1,11 @@
 import React from "react";
+import { useSelector } from "react-redux/es/exports";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const cartCount = useSelector((state) => state.cart.quantity);
+  console.log(cartCount);
+
   return (
     <nav class="navbar navbar-expand-lg bg-light">
       <div class="container">
@@ -53,7 +57,10 @@ const Navbar = () => {
             type="button"
             class="border border-2 border-dark btn btn-light"
           >
-            Cart
+            Cart{" "}
+            <span className="border border-2 border-dark ms-2 px-2">
+              {cartCount}
+            </span>
           </Link>
         </div>
       </div>

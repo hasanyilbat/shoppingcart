@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux/es/hooks/useDispatch";
 import { setUser } from "../features/authSlice";
-
+import { useNavigate } from "react-router-dom";
 const Login = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -11,6 +12,7 @@ const Login = () => {
     e.preventDefault();
     dispatch(setUser({ email, password }));
     console.log(password);
+    navigate("/products");
   };
 
   return (
